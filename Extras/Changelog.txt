@@ -1,0 +1,129 @@
+//---------------------------Command---------------------------//
+Kn-2 Crew Cabin
+- Increased node size from 0 to 1
+- Increased entryCost to 11500 from 8000
+- Increased cost from 4000 to 4800
+- Increased crashTolerance from 30 to 40
+- Added breakingForce/Torque of 200
+- Decreased maxTemp from 2500 to 1100, with skinMaxTemp of 2000
+- Decreased thermalMassModifier from 4 to 1
+- vesselType is now Plane
+- Added/updated bulkheadProfiles
+- Added tags
+- Added usageReqMasks to Crew Report
+- Decreased ElectricCharge rate on Reaction Wheel from 0.25 to 0.24
+- Added ModuleDataTransmitter
+
+KPM-1 Small Inline Passenger Compartment
+- Decreased entryCost from 5800 to 1300 (compare to Mk1 Crew Cabin, which seats 2, and costs 2600)
+- Decreased cost from 800 to 275 (compare to Mk1 Crew Cabin, which seats 2, and costs 550)
+- Increased angularDrag from 1 to 2
+- Increased crashTolerance from 25 to 40
+- Added breakingForce/Torque of 200 (completely excessive)
+- Decreased maxTemp from 3000 to 1000, with skinMaxTemp of 2000
+- Decreased thermalMassModifier from 4.0 to 1.0
+- Added "noAutoEVAMulti = True"
+- Fixed bulkheadProfiles
+- Added tags
+- Added usageReqMasks to Crew Report
+- Increased storageRange on ModuleScienceContainer from 1.3 to 1.5
+- Added ModuleDataTransmitter
+
+EAS-2 Heavy Duty Command Seat
+- Added breakingForce/Torque of 200
+- Decreased maxTemp from 2300 to 2000
+- Decreased thermalMassModifier from 4 to 1
+- Added/updated bulkheadProfiles
+- Added tags
+- Decreased ElectricCharge rate on Reaction Wheel from 0.1 to 0.004
+
+//---------------------------Control---------------------------//
+BN-14 Steerable Grid Fin
+- Decreased mass from 0.2 to 0.1
+- Decreased crashTolerance from 24 to 8
+- Decreased maxTemp from 2500 to 2400
+- Increased thermalMassModifier from 3.0 to 5.0
+- Added emissiveConstant of 0.4
+- Added/updated bulkheadProfiles
+- Added tags
+- Added actuatorSpeed of 30 to ModuleControlSurface
+
+Self-Contained Probe RCS
+- Renamed to "Self-Contained RCS Block"
+- Increased crashTolerance from 12 to 15
+- Decreased maxTemp from 2800 to 1500
+- Decreased thermalMassModifier from 4.0 to 1.0
+- Added PhysicsSignificance = 1
+- Added/updated bulkheadProfiles
+- Added tags
+- Converted ModuleRCS to new ModuleRCSFX
+- Added STAGE_PRIORITY_FLOW to ModuleRCSFX
+- Added stagingEnabled = False
+- Added soundFX (same as stock)
+
+//---------------------------Coupling---------------------------//
+Radial Micro Decoupler
+- Decreased entryCost from 4000 to 200
+- Decreased cost from 300 to 100
+- Changed category to Coupling
+- Decreased mass from 0.01 to 0.005
+- Decreased maxTemp from 2100 to 2000
+- Decreased thermalMassModifier from 4.0 to 1.0
+- Enforced stagingIcon
+- Added/updated bulkheadProfiles
+- Added tags
+- ModuleToggleCrossfeed now requires tech "fuelSystems" (same as stock)
+
+//---------------------------Engines---------------------------//
+Rocket-Assisted Takeoff Booster (RATO)
+- Decreased maxTemp from 2500 to 2000
+- Added heatConductivity of 0.06 (half default)
+- Added skinInternalConductionMult of 4.0
+- Added emissiveConstant of 0.5
+- Enforced stagingIcon
+- Added/updated bulkheadProfiles
+- Added tags
+- Added EffectName's to ModuleEngines (don't think it has any... effect)
+- Added exhaustDamageMultiplier of 5, just 'cuz
+
+JF-44  "Willy" Mini-Turbojet
+- Decreased crashTolerance from 15 to 7
+- Decreased maxTemp from 2500 to 200
+- Added heatConductivity of 0.06 (half default)
+- Added skinInternalConductionMult of 4.0
+- Added emissiveConstant of 0.5
+- Enforced stagingIcon
+- Added/updated bulkheadProfiles
+- Added tags
+- Removed DrawGauge from IntakeAir
+- Converted ModuleAnimateHeat to FXModuleAnimateThrottle
+- Increased IntakeAir resource quantity from 0.4 to 0.5
+- Removed ElectricCharge resource of 0
+- Decreased alternator ElectricCharge rate from 1 to 0.5
+
+//---------------------------Fuel---------------------------//
+50 Litre Drop Tank
+- Added "sound_vent_large" on decouple
+- Changed category to FuelTank
+- Decreased drag slightly
+- Decreased crashTolerance from 25 to 10
+- Decreased maxTemp from 3000 to 2000
+- Decreased thermalMassModifier from 4.0 to 1.0
+- Added emissiveConstant of 0.8
+- Added tags
+- Added ModuleToggleCrossfeed (defaults ON)
+
+//---------------------------Misc---------------------------//
+Hood Ornament
+- Decreased entryCost from 750 to 250
+- Part now has small amount of drag, up from 0
+- Added breakingForce/Torque of 200, for no reason
+- Decreased maxTemp from 3000 to 2000
+- Increased thermalMassModifier from 4.0 to 5.0
+- Added emissiveConstant of 0.95
+- Added tags
+
+//---------------------------Extras---------------------------//
+- Added TweakScale patch (Engines & Crewed parts disabled by default)
+- Added "SeatScience" patch (disabled by default), that adds Crew Report and Science Container to the HD External Command Seat
+- Added "HoodOP" patch (disabled by default), that rebalances the Hood Ornament and turns it into a super advanced avionics control unit (SAS = 4). Also adds MechJeb if installed.

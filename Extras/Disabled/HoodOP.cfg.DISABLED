@@ -1,0 +1,30 @@
+//Adds MechJeb
+@PART[HoodOrnament]:NEEDS[Kerbonov&MechJeb2]
+{
+  MODULE
+  {
+      name = MechJebCore
+  }
+}
+
+
+//Makes it into an advanced Avioncs platform
+@PART[HoodOrnament]:NEEDS[Kerbonov]:FINAL
+{
+  @TechRequired = specializedControl // engineering101
+  @entryCost = 14500 // 250
+  @cost = 6500 // 50
+  @category = Control
+  %tags = hood ornament kerbonov faster advanced aero aircraft control drag fighter fligh jet kerbnet plane sas stab stream
+  MODULE
+	{
+		name = ModuleSAS
+		SASServiceLevel = 4
+		standalone = True
+		RESOURCE
+		{
+			name = ElectricCharge
+			rate = 0.05 // 0.03
+		}
+	}
+}
